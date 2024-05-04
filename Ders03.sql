@@ -84,3 +84,37 @@ SELECT a.EmployeeID as 'Çalışan ID' , (a.FirstName+ ' ' + a.LastName) as 'Ça
  /*
  Bu sorgu, çalışanlar tablosunu kendisiyle birleştirerek (SELF JOIN), her çalışanın yanında onun yöneticisinin bilgilerini de gösterir.
  */
+
+ /*
+
+ Customers ve Orders -> Order Details
+Ödev 1: Müşteriler ve Siparişler
+Amaç: Tüm müşterileri ve eğer varsa onlara ait sipariş bilgilerini listelemek.
+
+Görev Detayları:
+
+Müşterilerin şirket adı (CompanyName), şehirleri (City) ve ülkeleri (Country) ile birlikte sipariş numarası (OrderID) ve sipariş tarihini (OrderDate) gösteren bir liste oluşturun.
+Bu sorgu, müşteriye ait bir sipariş olmasa bile müşteri bilgilerini göstermelidir.
+ 
+-----
+ Products ,Suppliers , Catgories
+ Ödev 2: Ürünler, Tedarikçiler ve Kategoriler
+Amaç: Her ürün için ürün adı, tedarikçi şirketi, kategori adı ve stoktaki ürün miktarını listelemek.
+
+Görev Detayları:
+
+Ürünler tablosundaki her bir ürün için tedarikçi adı (CompanyName) ve kategori adı (CategoryName) ile birlikte ürün adını (ProductName) ve stoktaki miktarını (UnitsInStock) içeren bir rapor hazırlayın.
+Ürün, tedarikçi veya kategori bilgisi eksik olan ürünler de raporda yer almalıdır.
+
+-----
+Employees
+
+Ödev 3: Çalışanlar ve Yöneticiler
+Amaç: Şirket içindeki tüm çalışanların ve onların doğrudan yöneticilerinin adlarını listelemek.
+
+Görev Detayları:
+
+Her çalışan için adı (FirstName), soyadı (LastName) ve doğrudan yöneticisinin adı ve soyadını içeren bir liste oluşturun.
+Yöneticisi olmayan çalışanlar için yönetici adının 'Yok' olarak gösterilmesi gerekmektedir.
+ 
+ */
