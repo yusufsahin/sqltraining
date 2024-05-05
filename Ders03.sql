@@ -95,6 +95,7 @@ Görev Detayları:
 
 Müşterilerin şirket adı (CompanyName), şehirleri (City) ve ülkeleri (Country) ile birlikte sipariş numarası (OrderID) ve sipariş tarihini (OrderDate) gösteren bir liste oluşturun.
 Bu sorgu, müşteriye ait bir sipariş olmasa bile müşteri bilgilerini göstermelidir.
+
  
 -----
  Products ,Suppliers , Catgories
@@ -118,3 +119,23 @@ Her çalışan için adı (FirstName), soyadı (LastName) ve doğrudan yönetici
 Yöneticisi olmayan çalışanlar için yönetici adının 'Yok' olarak gösterilmesi gerekmektedir.
  
  */
+
+ SELECT * FROM Customers;
+
+ SELECT * FROM Orders;
+ /*Ödev 1: Müşteriler ve Siparişler*/
+ SELECT c.CompanyName,c.City,c.Country,o.OrderID,o.OrderDate FROM Customers c LEFT JOIN Orders o ON  c.CustomerID=o.CustomerID; 
+
+
+
+ SELECT * FROM Products;
+ SELECT * FROM Suppliers;
+ SELECT * FROM Categories;
+ /* Ödev 2: Ürünler, Tedarikçiler ve Kategoriler*/
+ SELECT p.ProductName,s.CompanyName As SupplierName,c.CategoryName,p.UnitsInStock FROM Products p 
+	LEFT JOIN Suppliers s ON p.SupplierID=s.SupplierID
+	LEFT JOIN Categories c ON p.CategoryID=c.CategoryID;
+
+/*Ödev 3: Çalışanlar ve Yöneticiler*/
+ SELECT e.FirstName EmployeeFirstName, e.LastName, m.FirstName ManagerFirstName, m.LastName FROM Employees e 
+ LEFT JOIN Employees m ON e.ReportsTo=m.EmployeeID;
