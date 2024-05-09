@@ -1,6 +1,6 @@
 USE [master]
 GO
-
+/*
 /****** Object:  Database [dbOdev1]    Script Date: 9.05.2024 19:22:37 ******/
 CREATE DATABASE [dbOdev1]
  CONTAINMENT = NONE
@@ -126,7 +126,7 @@ GO
 
 SET QUOTED_IDENTIFIER ON
 GO
-
+*/
 CREATE TABLE [dbo].[Categories](
 	[CategoryID] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [nchar](10) NULL,
@@ -146,6 +146,7 @@ GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 CREATE TABLE [dbo].[Products](
 	[ProductID] [int] IDENTITY(1,1) NOT NULL,
